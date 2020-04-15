@@ -44,18 +44,21 @@ setTimeout(function () {
     }
 
     console.log(numberUtente);
-    alert('Numeri Iniziali: ' + randomNumber + '\n Numeri inseriti: ' + numberUtente)
+    
 
-    var find = 0;
+    var matchNumber = [];
+    
     // numeri uguali tra i due array
     for (var i = 0; i < randomNumber.length; i++) {
-
-        if (randomNumber.includes(numberUtente)) {
-            find++;
+        var trovati = numberUtente[i];
+        if (randomNumber.includes(trovati)) {
+            matchNumber.push(trovati)
         }
     }
 
-    console.log(find);
+
+    alert('Numeri da Ricordare: ' + randomNumber + '\nPunteggio: ' + matchNumber.length  + '\nNumeri Ricordati: ' + matchNumber)
+    console.log(matchNumber);
     
 
 }, 1000);
