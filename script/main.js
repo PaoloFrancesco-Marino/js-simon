@@ -11,7 +11,6 @@
 
 var randomNumber = []; //array vuoto per i numeri casuali
 
-
 // genero i numeri random controllo che non siano uguali e li pusho dentro l'array vuoto 
 for (var i = 0; randomNumber.length < 5; i++) {
 
@@ -22,7 +21,7 @@ for (var i = 0; randomNumber.length < 5; i++) {
     }
 }
 
-alert('Numeri Generati Casualmete: \n' + randomNumber) //alert per far vedere i numeri
+alert('Numeri Generati Casualmete da Ricordare: \n' + randomNumber) //alert per far vedere i numeri
 console.log(randomNumber);
 
 
@@ -34,7 +33,7 @@ var sceltaUtente; //var per richiedere il numero all'utente
 setTimeout(function () {  
 
     for (var i = 0; numberUtente.length < 5; i++) {
-        sceltaUtente = prompt('Inserisci un Numero');
+        sceltaUtente = parseInt(prompt('Inserisci un Numero'));
 
         if (!numberUtente.includes(+sceltaUtente))
             numberUtente.push(+sceltaUtente);
@@ -61,22 +60,7 @@ setTimeout(function () {
     console.log(matchNumber);
     
 
-}, 1000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}, 1000); //inserico tempo minore per per non aspettare 30 secondi (30000)
 
 
 /** 
