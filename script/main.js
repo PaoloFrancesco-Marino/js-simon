@@ -30,7 +30,7 @@ var sceltaUtente; //var per richiedere il numero all'utente
 
 // richiesta dopo 30 secondi di inserire i numeri
 
-setTimeout(function () {  
+var interval = setInterval(function () {  
 
     for (var i = 0; numberUtente.length < 5; i++) {
         sceltaUtente = parseInt(prompt('Inserisci un Numero'));
@@ -60,7 +60,11 @@ setTimeout(function () {
     console.log(matchNumber);
     
 
-}, 1000); //inserico tempo minore per per non aspettare 30 secondi (30000)
+    clearInterval(interval);
+    
+}, 30000); //inserico tempo minore per per non aspettare 30 secondi (30000)
+
+
 
 
 /** 
